@@ -12,6 +12,10 @@
       href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/earlyaccess/kokoro.css"
+      rel="stylesheet"
+    />
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -37,6 +41,14 @@
     <style>
       body {
         font-family: "Zen Kaku Gothic New", sans-serif;
+      }
+
+      .kokoro-font {
+        font-family: "Kokoro", cursive;
+      }
+
+      .kokoro-font strong {
+        font-weight: 300;
       }
 
       .fade-in {
@@ -177,9 +189,12 @@
       <div class="absolute inset-0 bg-black bg-opacity-40"></div>
       <div class="relative z-10 text-center px-4">
         <h1
-          class="text-3xl md:text-5xl lg:text-6xl font-bold text-white text-shadow max-w-4xl mx-auto leading-tight"
+          class="text-3xl md:text-5xl lg:text-6xl font-bold text-white text-shadow max-w-4xl mx-auto leading-relaxed md:leading-relaxed lg:leading-relaxed kokoro-font"
         >
-          株式会社ケイツーコーポレーションは、不動産ビジネスのあらゆる分野で皆様のお手伝いができる会社を目指しています。
+          <strong>不動産</strong>ビジネスの<br />
+          あらゆる<strong>分野</strong>で<br />
+          <strong>皆様</strong>のお<strong>手伝</strong>いができる<br />
+          <strong>会社</strong>を<strong>目指</strong>して
         </h1>
       </div>
     </section>
@@ -192,63 +207,139 @@
         </h2>
 
         <!-- 実績リスト -->
-        <div class="max-w-4xl mx-auto mb-16">
-          <ul class="grid md:grid-cols-2 gap-4 text-gray-700">
-            <li class="flex items-start">
-              <span class="text-blue-600 mr-2">•</span>
-              渋谷宇田川町 商業ビル開発プロジェクト
+        <div class="max-w-6xl mx-auto mb-16">
+          <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-gray-700">
+            <li
+              class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow h-24"
+            >
+              <div class="text-center">
+                <div class="font-medium text-gray-800">渋谷宇田川町</div>
+                <div class="text-sm text-gray-600">
+                  商業ビル開発プロジェクト
+                </div>
+              </div>
             </li>
-            <li class="flex items-start">
-              <span class="text-blue-600 mr-2">•</span>
-              月島２丁目 長屋再開発プロジェクト
+            <li
+              class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow h-24"
+            >
+              <div class="text-center">
+                <div class="font-medium text-gray-800">月島２丁目</div>
+                <div class="text-sm text-gray-600">長屋再開発プロジェクト</div>
+              </div>
             </li>
-            <li class="flex items-start">
-              <span class="text-blue-600 mr-2">•</span>
-              両国 町工場再開発プロジェクト
+            <li
+              class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow h-24"
+            >
+              <div class="text-center">
+                <div class="font-medium text-gray-800">両国</div>
+                <div class="text-sm text-gray-600">
+                  町工場再開発プロジェクト
+                </div>
+              </div>
             </li>
-            <li class="flex items-start">
-              <span class="text-blue-600 mr-2">•</span>
-              銀座７丁目 ホテル開発プロジェクト
+            <li
+              class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow h-24"
+            >
+              <div class="text-center">
+                <div class="font-medium text-gray-800">銀座７丁目</div>
+                <div class="text-sm text-gray-600">ホテル開発プロジェクト</div>
+              </div>
             </li>
-            <li class="flex items-start">
-              <span class="text-blue-600 mr-2">•</span>
-              世田谷砧テラス デザイナーマンション再生プロジェクト
+            <li
+              class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow h-24"
+            >
+              <div class="text-center">
+                <div class="font-medium text-gray-800">世田谷砧テラス</div>
+                <div class="text-sm text-gray-600">
+                  デザイナーマンション再生プロジェクト
+                </div>
+              </div>
             </li>
-            <li class="flex items-start">
-              <span class="text-blue-600 mr-2">•</span>
-              神宮前商業ビル 原宿駅前ビルプロジェクト
+            <li
+              class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow h-24"
+            >
+              <div class="text-center">
+                <div class="font-medium text-gray-800">神宮前商業ビル</div>
+                <div class="text-sm text-gray-600">
+                  原宿駅前ビルプロジェクト
+                </div>
+              </div>
             </li>
-            <li class="flex items-start">
-              <span class="text-blue-600 mr-2">•</span>
-              東京スカイツリー 賃貸マション開発プロジェクト
+            <li
+              class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow h-24"
+            >
+              <div class="text-center">
+                <div class="font-medium text-gray-800">東京スカイツリー</div>
+                <div class="text-sm text-gray-600">
+                  賃貸マション開発プロジェクト
+                </div>
+              </div>
             </li>
-            <li class="flex items-start">
-              <span class="text-blue-600 mr-2">•</span>
-              石垣島 リゾートホテル開発プロジェクト
+            <li
+              class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow h-24"
+            >
+              <div class="text-center">
+                <div class="font-medium text-gray-800">石垣島</div>
+                <div class="text-sm text-gray-600">
+                  リゾートホテル開発プロジェクト
+                </div>
+              </div>
             </li>
-            <li class="flex items-start">
-              <span class="text-blue-600 mr-2">•</span>
-              八戸再開発 マンション・商業施設・ホテル複合ビル開発プロジェクト
+            <li
+              class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow h-24"
+            >
+              <div class="text-center">
+                <div class="font-medium text-gray-800">八戸再開発</div>
+                <div class="text-sm text-gray-600">
+                  マンション・商業施設・ホテル複合ビル<br />
+                  開発プロジェクト
+                </div>
+              </div>
             </li>
-            <li class="flex items-start">
-              <span class="text-blue-600 mr-2">•</span>
-              上尾市原市 物流倉庫建設プロジェクト
+            <li
+              class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow h-24"
+            >
+              <div class="text-center">
+                <div class="font-medium text-gray-800">上尾市原市</div>
+                <div class="text-sm text-gray-600">
+                  物流倉庫建設プロジェクト
+                </div>
+              </div>
             </li>
-            <li class="flex items-start">
-              <span class="text-blue-600 mr-2">•</span>
-              上尾市緑 物流倉庫再生プロジェクト
+            <li
+              class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow h-24"
+            >
+              <div class="text-center">
+                <div class="font-medium text-gray-800">上尾市緑</div>
+                <div class="text-sm text-gray-600">
+                  物流倉庫再生プロジェクト
+                </div>
+              </div>
             </li>
-            <li class="flex items-start">
-              <span class="text-blue-600 mr-2">•</span>
-              東浦和１・２ 戸建開発プロジェクト
+            <li
+              class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow h-24"
+            >
+              <div class="text-center">
+                <div class="font-medium text-gray-800">東浦和１・２</div>
+                <div class="text-sm text-gray-600">戸建開発プロジェクト</div>
+              </div>
             </li>
-            <li class="flex items-start">
-              <span class="text-blue-600 mr-2">•</span>
-              南房総 鴨川 シーサイドリゾートマンションプロジェクト
+            <li
+              class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow h-24"
+            >
+              <div class="text-center">
+                <div class="font-medium text-gray-800">南房総 鴨川</div>
+                <div class="text-sm text-gray-600">
+                  シーサイドリゾートマンションプロジェクト
+                </div>
+              </div>
             </li>
-            <li class="flex items-start">
-              <span class="text-blue-600 mr-2">•</span>
-              その他多数
+            <li
+              class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow h-24"
+            >
+              <div class="text-center">
+                <div class="font-medium text-gray-800">その他多数</div>
+              </div>
             </li>
           </ul>
         </div>
@@ -299,7 +390,8 @@
             <!-- プロジェクト名 -->
             <div class="flex-1 text-center lg:text-left">
               <h4 class="text-2xl font-bold text-gray-800 mb-4">
-                南房総 鴨川 シーサイドリゾートマンションプロジェクト
+                南房総 鴨川 シーサイドリゾート<br />
+                マンションプロジェクト
               </h4>
               <p class="text-gray-600 leading-relaxed">
                 海を望む絶景の地で実現した、高級リゾートマンション開発プロジェクト。
@@ -349,7 +441,7 @@
             <!-- 地図 -->
             <div class="flex-1">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.245829928168!2d139.7680783152591!3d35.69557568019099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c1c5a3d4d7b%3A0xe538d3506b162fab!2z44CSMTAxLTAwMjEg5p2x5Lqs6YO95Y2D5Luj55Sw5Yy65aSP56We55SwMi0xOS0xNA!5e0!3m2!1sja!2sjp!4v1625123456789!5m2!1sja!2sjp"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.980934746137!2d139.7642004763693!3d35.70208677258063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c1921502b09%3A0xeda1e2be93270b3f!2z44CSMTAxLTAwMjEg5p2x5Lqs6YO95Y2D5Luj55Sw5Yy65aSW56We55Sw77yS5LiB55uu77yR77yZ4oiS77yR77yUIOOBiuiMtuOBruawtOODn-ODr-ODk-ODqw!5e0!3m2!1sja!2sjp!4v1751553037296!5m2!1sja!2sjp"
                 width="100%"
                 height="450"
                 style="border: 0"
@@ -457,16 +549,16 @@
                 class="glightbox"
                 data-description="コミュニケーションロボット：ロビ君"
               >
-                <div class="relative">
+                <div class="flex">
                   <img
                     src="gazou/office_robi_01.jpg"
                     alt="オフィス ロビ君1"
-                    class="w-full h-32 object-cover"
+                    class="w-1/2 h-64 object-cover"
                   />
                   <img
                     src="gazou/office_robi_02.jpg"
                     alt="オフィス ロビ君2"
-                    class="w-full h-32 object-cover"
+                    class="w-1/2 h-64 object-cover"
                   />
                 </div>
               </a>
