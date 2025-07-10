@@ -118,7 +118,6 @@
     * `image_inheritance.png`
     * `image_earthquake.png`
 
-このプロンプトで、HTMLページを生成するための十分な情報が提供されているはずです。"
 
 
 
