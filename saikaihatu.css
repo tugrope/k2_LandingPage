@@ -141,19 +141,18 @@
   border-left: 6px solid white;
 }
 
-/* 協力要請セクション */
+/* ご協力くださいセクションを他の通常セクションと同じデザインに統一 */
 .cooperation-section {
-  background: #fff3e0;
-  border: 3px solid #ff9800;
+  background: #fff;
+  border: 1px solid #cfd8dc;
   border-radius: 12px;
   padding: 2em;
   margin: 2em 0;
-  text-align: center;
 }
 
 .cooperation-section h2 {
-  color: #ff9800;
-  border-left: 6px solid #ff9800;
+  color: #1a237e;
+  border-left: 6px solid #1976d2;
 }
 
 /* レスポンシブ対応 */
