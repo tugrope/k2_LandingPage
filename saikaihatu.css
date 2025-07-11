@@ -1,0 +1,188 @@
+/* 再開発ページ固有のスタイル */
+
+/* ヘッダーセクション */
+.redevelopment-header {
+  background: linear-gradient(135deg, #1976d2, #42a5f5);
+  color: white;
+  text-align: center;
+  padding: 3em 0 2em 0;
+  margin-bottom: 0;
+}
+
+.redevelopment-header h1 {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 0.5em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* FAQ セクション */
+.faq-section {
+  background: #e3f2fd;
+  border-left: 6px solid #1976d2;
+  padding: 2em;
+  margin: 2em 0;
+}
+
+.faq-item {
+  margin-bottom: 1.5em;
+  border-bottom: 1px solid #bbdefb;
+  padding-bottom: 1em;
+}
+
+.faq-question {
+  background: #1976d2;
+  color: white;
+  padding: 0.8em 1em;
+  border-radius: 8px 8px 0 0;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.faq-answer {
+  background: white;
+  padding: 1em;
+  border: 1px solid #bbdefb;
+  border-radius: 0 0 8px 8px;
+  margin-top: 0;
+}
+
+/* 再開発プロセス */
+.process-flow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1em;
+  margin: 2em 0;
+}
+
+.process-step {
+  flex: 1;
+  min-width: 200px;
+  background: #f5f5f5;
+  border: 2px solid #1976d2;
+  border-radius: 12px;
+  padding: 1.5em;
+  text-align: center;
+  position: relative;
+}
+
+.process-step:not(:last-child)::after {
+  content: "→";
+  position: absolute;
+  right: -1.5em;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5em;
+  color: #1976d2;
+  font-weight: bold;
+}
+
+/* 土地変遷イメージ */
+.land-transformation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  margin: 2em 0;
+  padding: 2em;
+  background: #f8f9fa;
+  border-radius: 12px;
+}
+
+.land-image {
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
+}
+
+.land-image img {
+  max-width: 100px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.transformation-arrow {
+  font-size: 2em;
+  color: #1976d2;
+  font-weight: bold;
+}
+
+/* メリット事例 */
+.merit-case {
+  background: #f3e5f5;
+  border: 2px solid #9c27b0;
+  border-radius: 12px;
+  padding: 1.5em;
+  margin: 1.5em 0;
+}
+
+.merit-case h3 {
+  background: #9c27b0;
+  color: white;
+  padding: 0.8em;
+  margin: -1.5em -1.5em 1em -1.5em;
+  border-radius: 10px 10px 0 0;
+}
+
+/* 会社情報 */
+.company-info {
+  background: #1976d2;
+  color: white;
+  padding: 2em;
+  border-radius: 12px;
+  margin: 2em 0;
+}
+
+.company-info h2 {
+  color: white;
+  border-left: 6px solid white;
+}
+
+/* 協力要請セクション */
+.cooperation-section {
+  background: #fff3e0;
+  border: 3px solid #ff9800;
+  border-radius: 12px;
+  padding: 2em;
+  margin: 2em 0;
+  text-align: center;
+}
+
+.cooperation-section h2 {
+  color: #ff9800;
+  border-left: 6px solid #ff9800;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .redevelopment-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .process-flow {
+    flex-direction: column;
+  }
+
+  .process-step:not(:last-child)::after {
+    content: "↓";
+    right: 50%;
+    bottom: -1.5em;
+    top: auto;
+    transform: translateX(50%);
+  }
+
+  .land-transformation {
+    flex-direction: column;
+  }
+
+  .transformation-arrow {
+    transform: rotate(90deg);
+  }
+
+  .faq-section {
+    padding: 1em;
+  }
+}
