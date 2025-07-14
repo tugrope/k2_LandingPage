@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>再開発計画のご提案 | 株式会社ケイツーコーポレーション</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="gazou/favicon_k2.png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/earlyaccess/kokoro.css"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="common.css" />
+    <link rel="stylesheet" href="saikaihatu.css" />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              zen: ["Zen Kaku Gothic New", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      body {
+        font-family: "Zen Kaku Gothic New", sans-serif;
+      }
+
+      .kokoro-font {
+        font-family: "Kokoro", cursive;
+      }
+
+      .kokoro-font strong {
+        font-weight: 300;
+      }
+
+      .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .smooth-scroll {
+        scroll-behavior: smooth;
+      }
+
+      .header-shadow {
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .text-shadow {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+    </style>
+  </head>
+  <body class="font-zen smooth-scroll">
+    <!-- ヘッダー (Header) -->
+    <header
+      id="header"
+      class="fixed top-0 left-0 right-0 bg-white header-shadow z-50"
+    >
+      <nav class="container mx-auto px-4 py-4">
+        <div class="flex justify-between items-center">
+          <div class="text-xl font-bold text-gray-800">K2 Corporation</div>
+
+          <!-- PC メニュー -->
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="index.html#top"
+              class="text-gray-700 hover:text-blue-600 transition-colors"
+              >トップ</a
+            >
+            <a
+              href="index.html#works"
+              class="text-gray-700 hover:text-blue-600 transition-colors"
+              >取引実績</a
+            >
+            <a
+              href="index.html#message"
+              class="text-gray-700 hover:text-blue-600 transition-colors"
+              >メッセージ</a
+            >
+            <a
+              href="#redevelopment"
+              class="text-gray-700 hover:text-blue-600 transition-colors"
+              >再開発事業</a
+            >
+            <a
+              href="index.html#access"
+              class="text-gray-700 hover:text-blue-600 transition-colors"
+              >アクセス</a
+            >
+            <a
+              href="index.html#gallery"
+              class="text-gray-700 hover:text-blue-600 transition-colors"
+              >オフィス</a
+            >
+            <a
+              href="index.html#contact"
+              class="text-gray-700 hover:text-blue-600 transition-colors"
+              >お問い合わせ</a
+            >
+          </div>
+
+          <!-- スマートフォン ハンバーガーメニュー -->
+          <div class="md:hidden">
+            <button id="menu-toggle" class="text-gray-700">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- スマートフォン メニュー -->
+        <div
+          id="mobile-menu"
+          class="md:hidden hidden bg-white border-t mt-4 py-4"
+        >
+          <div class="flex flex-col space-y-4">
+            <a
+              href="index.html#top"
+              class="text-gray-700 hover:text-blue-600 transition-colors"
+              >トップ</a
+            >
+            <a
+              href="index.html#works"
+              class="text-gray-700 hover:text-blue-600 transition-colors"
+              >取引実績</a
+            >
+            <a
+              href="index.html#message"
+              class="text-gray-700 hover:text-blue-600 transition-colors"
+              >メッセージ</a
+            >
+            <a
+              href="#redevelopment"
+              class="text-gray-700 hover:text-blue-600 transition-colors"
+              >再開発事業</a
+            >
+            <a
+              href="index.html#access"
+              class="text-gray-700 hover:text-blue-600 transition-colors"
+              >アクセス</a
+            >
+            <a
+              href="index.html#gallery"
+              class="text-gray-700 hover:text-blue-600 transition-colors"
+              >オフィス</a
+            >
+            <a
+              href="index.html#contact"
+              class="text-gray-700 hover:text-blue-600 transition-colors"
+              >お問い合わせ</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- 再開発ヘッダー -->
+    <header
+      id="redevelopment"
+      class="redevelopment-header py-20"
+      style="margin-top: 80px"
+    >
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl font-bold mb-8">再開発計画のご提案</h1>
+        <img
+          src="gazou_saikaihatu/image_buildings.png"
+          alt="高層ビルが立ち並ぶ都市の景観"
+          class="mx-auto"
+        />
+      </div>
+    </header>
+
+    <main>
+      <!-- ご売却検討の際よくあるご質問 -->
+      <section class="faq-section py-20">
+        <div class="container mx-auto px-4">
+          <h2>ご売却検討の際よくあるご質問</h2>
+
+          <div class="faq-item">
+            <h3 class="faq-question">売却スケジュールは？</h3>
+            <p class="faq-answer">
+              お客さまのご意向によりまずが、個別のご契約締結から概ね1年以内の土地引き渡しを目標とさせていただきます。
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">現在賃貸中でも売却可能？</h3>
+            <p class="faq-answer">
+              もちろん可能です。賃貸状況を伺い、対応方法をご相談させていただきます。
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">借地でも売却可能？</h3>
+            <p class="faq-answer">
+              もちろん可能です。底地オーナー様と弊社担当者が協議のうえ計画を検討させていただきます。
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">売却した後の移転先は？</h3>
+            <p class="faq-answer">
+              ご希望条件に強い提携不動産会社をご紹介するほか、弊社としても全力でお手伝いさせていただきます。
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">
+              質問や意見がある場合どうすればよいですか？
+            </h3>
+            <p class="faq-answer">
+              弊社担当までお気軽にご連絡ください。一体となった合同の売却だけのお問い合わせでも大丈夫です！
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 再開発とは -->
+      <section class="py-20">
+        <div class="container mx-auto px-4">
+          <h2>再開発とは</h2>
+          <p>
+            複数の土地を一団の土地にする事で、街や建造物を時代にあった形に改修し都市の機能性や居住性を向上させ使い勝手や資産価値を高める事です。
+          </p>
+
+          <h3>例えば</h3>
+          <ul>
+            <li>
+              複数の木造一戸建、アパートを一つの敷地にまとめ中高層マンションやオフィスビル等の事業用途とする。
+            </li>
+            <li>複数の不整形地を一つの敷地にまとめて整形地にする。</li>
+          </ul>
+
+          <div class="land-transformation">
+            <div class="land-image">
+              <img
+                src="gazou_saikaihatu/image_land_transformation_35.png"
+                alt="土地利用の変遷イメージ35坪"
+              />
+              <p>35坪<br />1戸建住宅</p>
+            </div>
+            <div class="transformation-arrow">→</div>
+            <div class="land-image">
+              <img
+                src="gazou_saikaihatu/image_land_transformation_70.png"
+                alt="土地利用の変遷イメージ70坪"
+              />
+              <p>70坪<br />1戸建アパート</p>
+            </div>
+            <div class="transformation-arrow">→</div>
+            <div class="land-image">
+              <img
+                src="gazou_saikaihatu/image_land_transformation_15.png"
+                alt="土地利用の変遷イメージ15坪"
+              />
+              <p>15坪<br />1戸建住宅3軒</p>
+            </div>
+            <div class="transformation-arrow">→</div>
+            <div class="land-image">
+              <img
+                src="gazou_saikaihatu/image_land_transformation_150.png"
+                alt="土地利用の変遷イメージ150坪"
+              />
+              <p>150坪マンション用地</p>
+            </div>
+          </div>
+          <p style="text-align: center; font-weight: bold; color: #1976d2">
+            再開発により
+          </p>
+        </div>
+      </section>
+
+      <!-- 再開発全体の流れ -->
+      <section class="py-20">
+        <div class="container mx-auto px-4">
+          <h2>再開発全体の流れ</h2>
+          <div class="process-flow">
+            <div class="process-step">
+              <h3>皆様のご意向確認</h3>
+            </div>
+            <div class="process-step">
+              <h3>計画範囲の決定</h3>
+            </div>
+            <div class="process-step">
+              <h3>金額等条件面でのご調整</h3>
+            </div>
+            <div class="process-step">
+              <h3>個別にご売買契約を締結</h3>
+            </div>
+          </div>
+          <p>
+            <strong
+              >※計画範囲の全ての方とのご売買契約が成立した場合のみ契約は有効となります。</strong
+            >
+          </p>
+          <p>
+            <strong
+              >※弊社または弊社の提携会社が直接購入しますので余計な手数料もかかりません。</strong
+            >
+          </p>
+        </div>
+      </section>
+
+      <!-- ご協力ください -->
+      <section class="cooperation-section py-20">
+        <div class="container mx-auto px-4">
+          <h2>ご協力ください</h2>
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              gap: 1.5em;
+              flex-wrap: wrap;
+            "
+          >
+            <img
+              src="gazou_saikaihatu/image_staff.png"
+              alt="担当者のイラスト"
+              style="max-width: 120px"
+            />
+            <p style="margin: 0">
+              近隣の方々を含めた判断が必要となるため、皆様のご意向の確認にご協力ください。ご協力にあたっては、近隣の皆様と概ねのスケジュールを合わせる必要がございます。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 再開発を行う事で得られるメリット -->
+      <section class="py-20">
+        <div class="container mx-auto px-4">
+          <h2>再開発を行う事で得られるメリット</h2>
+          <ul>
+            <li>
+              建物の耐震化・安全性の向上により、防災機能を高め治安の良い街づくりに貢献する事が出来ます。
+            </li>
+            <li>
+              近隣の方々と併せて土地を売却する事で、敷地全体の資産価値が向上する可能性があり、その恩恵を受ける事が出来ます。
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 街全体としてのメリット -->
+      <section class="py-20">
+        <div class="container mx-auto px-4">
+          <h2>街全体としてのメリット</h2>
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              gap: 2em;
+              flex-wrap: wrap;
+            "
+          >
+            <img
+              src="gazou_saikaihatu/image_cityscape.png"
+              alt="街のイラスト"
+              style="max-width: 200px"
+            />
+            <div>
+              <p>
+                一体開発により、地域環境の改善、防災環境の改善、付加価値の向上を見込みます。その付加価値を地権者の皆様に還元することができます。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 再開発での土地売却で得られるメリット事例 -->
+      <section class="py-20">
+        <div class="container mx-auto px-4">
+          <h2>再開発での土地売却で得られるメリット事例</h2>
+
+          <div class="merit-case">
+            <h3>相続発生後に親族で揉める事を防ぎたい。</h3>
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 1.5em;
+                flex-wrap: wrap;
+              "
+            >
+              <img
+                src="gazou_saikaihatu/image_inheritance.png"
+                alt="相続のイメージ"
+                style="max-width: 120px"
+              />
+              <p>
+                不動産を分けられないので、相続発生前に売却する事で現金化して相続発生後に分配出来ます。
+              </p>
+            </div>
+          </div>
+
+          <div class="merit-case">
+            <h3>地震対策</h3>
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 1.5em;
+                flex-wrap: wrap;
+              "
+            >
+              <img
+                src="gazou_saikaihatu/image_earthquake.png"
+                alt="地震のイメージ"
+                style="max-width: 120px"
+              />
+              <p>
+                ご本人、ご家族、ご入居者のために建物を耐震補強する、建て替えるかなど費用をかけて地震対策をする必要がありません。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 会社情報 -->
+      <section class="company-info py-20">
+        <div class="container mx-auto px-4">
+          <h2 style="color: #1a237e">会社情報</h2>
+          <p><strong>東京都知事免許(2)第98820号</strong></p>
+          <p><strong>株式会社ケイツーコーポレーション</strong></p>
+          <p>〒101-0021 東京都千代田区外神田2-19-14 お茶の水ミワビル 1F</p>
+          <p>TEL 090-8439-1252（直通） 担当／田中</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- フッター -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 株式会社ケイツーコーポレーション All Rights Reserved.</p>
+        <p>
+          <a href="index.html" style="color: white; text-decoration: underline"
+            >メインページに戻る</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // ハンバーガーメニュー
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // スムーズスクロール
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            const headerHeight = document.getElementById("header").offsetHeight;
+            const targetPosition = target.offsetTop - headerHeight;
+            window.scrollTo({
+              top: targetPosition,
+              behavior: "smooth",
+            });
+          }
+          // モバイルメニューを閉じる
+          mobileMenu.classList.add("hidden");
+        });
+      });
+
+      // フェードインアニメーション
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll(".fade-in").forEach((el) => {
+        observer.observe(el);
+      });
+
+      // ヘッダーの背景変更（スクロール時）
+      window.addEventListener("scroll", () => {
+        const header = document.getElementById("header");
+        if (window.scrollY > 100) {
+          header.classList.add("bg-white", "header-shadow");
+        } else {
+          header.classList.remove("bg-white", "header-shadow");
+        }
+      });
+    </script>
+  </body>
+</html>
